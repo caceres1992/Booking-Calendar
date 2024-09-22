@@ -1,7 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import "react-day-picker/style.css";
-// import { Calendar } from "@/components/ui/calendar";
 import {
   Popover,
   PopoverContent,
@@ -59,11 +58,8 @@ const CalendarBooking = ({ data }: Props) => {
                 {moment(date.from).format("ll")}
                 {" - "}
                 {moment(date.to).format("ll")}
-                {/* {format(date.from, "LLL d")} -{" "}
-                {format(date.to, "LLL dd, y")} */}
               </>
             ) : (
-              //   format(date.from, "LLL dd, y")''
               moment(date.from).format("ll")
             )
           ) : (
