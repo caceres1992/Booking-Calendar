@@ -11,6 +11,9 @@ export default async function Home() {
           Retrieving Calendar dates from <span>Google Calendar</span>
         </h1>
         <CalendarBooking data={data || []} />
+        <footer className=" text-center text-white">
+              this is a footer with colors
+        </footer>
       </div>
     </div>
   );
