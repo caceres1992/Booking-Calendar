@@ -1,4 +1,3 @@
-//@typescript-eslint/no-explicit-any
 import icsToJson from "ics-to-json";
 import moment from "moment";
 
