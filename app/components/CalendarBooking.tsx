@@ -15,11 +15,10 @@ type CalendarParse = {
   from: string;
   to: string;
 };
-
+//@typescript-eslint/no-explicit-any
 type Props = {
   data?: any;
 };
-
 
 const CalendarBooking = ({ data }: Props) => {
   const [date, setDate] = React.useState<DateRange | undefined>({
@@ -31,8 +30,7 @@ const CalendarBooking = ({ data }: Props) => {
   const handleBookedDates = () => {
     setDatesBlocked(data);
   };
-  
-  const isBlockedDay = (date: any) => {
+  const isBlockedDay = (date: Date) => {
     return datesBlocked.some(
       (range) =>
         date >= moment(range.from).toDate() && date <= moment(range.to).toDate()
@@ -41,8 +39,7 @@ const CalendarBooking = ({ data }: Props) => {
 
   useEffect(() => {}, [0]);
   return (
-    <Popover >
-        
+    <Popover>
       <PopoverTrigger asChild onClick={handleBookedDates}>
         <Button
           variant={"default"}
@@ -66,8 +63,6 @@ const CalendarBooking = ({ data }: Props) => {
             <span>Pick a date</span>
           )}
         </Button>
-       
-       
       </PopoverTrigger>
       <PopoverContent className="w-auto p-2">
         <DayPicker
