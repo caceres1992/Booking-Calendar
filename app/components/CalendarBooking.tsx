@@ -1,3 +1,4 @@
+//@typescript-eslint/no-explicit-any
 "use client";
 import { Button } from "@/components/ui/button";
 import "react-day-picker/style.css";
@@ -15,7 +16,6 @@ type CalendarParse = {
   from: string;
   to: string;
 };
-//@typescript-eslint/no-explicit-any
 type Props = {
   data?: any;
 };
