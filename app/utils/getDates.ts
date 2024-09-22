@@ -1,4 +1,4 @@
-// @ts-expect-error: This error occurs because of a temporary type mismatch
+//@typescript-eslint/no-explicit-any
 import icsToJson from "ics-to-json";
 import moment from "moment";
 
