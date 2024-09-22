@@ -12,7 +12,8 @@ export default async function Home() {
         </h1>
         <CalendarBooking data={data || []} />
         <footer className=" fixed w-full bottom-0 p-5 bg-gray-900 text-center text-white">
-        By Jasson Caceres
+          <p>By Jasson Caceres</p>
+          <p>{new Date().getFullYear()}</p>
         </footer>
       </div>
     </div>
