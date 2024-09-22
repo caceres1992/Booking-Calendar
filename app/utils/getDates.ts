@@ -1,4 +1,4 @@
-// @ts-ignoregit
+// @ts-expect-error
 import icsToJson from "ics-to-json";
 import { format, parseISO } from "date-fns";
 import moment from "moment";
