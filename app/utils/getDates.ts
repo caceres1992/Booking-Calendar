@@ -1,4 +1,4 @@
-// @ts-ignoregit
+// @ts-expect-error: something went wrong
 import icsToJson from "ics-to-json";
 import moment from "moment";
 
