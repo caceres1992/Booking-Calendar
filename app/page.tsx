@@ -1,7 +1,7 @@
 import CalendarBooking from "./components/CalendarBooking";
 import { fetchICSData } from "./utils/getDates";
 export default async function Home() {
-const CALENDARID = process.env.GOOGLE_CALENDAR_ID_PUBLIC;
+  const CALENDARID = process.env.GOOGLE_CALENDAR_ID_PUBLIC;
   const data = await fetchICSData(CALENDARID as string);
 
   return (
@@ -10,7 +10,7 @@ const CALENDARID = process.env.GOOGLE_CALENDAR_ID_PUBLIC;
         <h1 className="  text-4xl max-w-lg text-center  font-bold text-balance">
           Retrieving Calendar dates from <span>Google Calendar</span>
         </h1>
-        <CalendarBooking data={data} />
+        <CalendarBooking data={data || []} />
       </div>
     </div>
   );
