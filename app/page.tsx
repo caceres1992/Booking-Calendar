@@ -13,6 +13,7 @@ export default async function Home() {
         <CalendarBooking data={data || []} />
         <footer className=" text-center text-white">
           this is a footer with colors and more to the practice
+              this is a footer with colors
         </footer>
       </div>
     </div>
