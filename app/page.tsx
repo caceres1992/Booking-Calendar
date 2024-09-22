@@ -1,8 +1,8 @@
 import CalendarBooking from "./components/CalendarBooking";
 import { fetchICSData } from "./utils/getDates";
-const CALENDARID = process.env.GOOGLE_CALENDAR_ID_PUBLIC;
 export default async function Home() {
-  const data = await fetchICSData(CALENDARID!);
+const CALENDARID = process.env.GOOGLE_CALENDAR_ID_PUBLIC;
+  const data = await fetchICSData(CALENDARID as string);
 
   return (
     <div className=" bg-gradient-to-t from-orange-700 to-rose-600  min-h-screen">

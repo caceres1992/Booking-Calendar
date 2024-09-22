@@ -15,9 +15,9 @@ type CalendarParse = {
 };
 
 export const fetchICSData = async (calendarId:string) => {
+  const response = await fetch(calendarId); 
+
   try {
-    const response = await fetch(calendarId); 
- 
     const icsData = await response.text();
     const data: Calendar[] = icsToJson(icsData);
     const dataParse:CalendarParse[] = data.map((dateItem) => ({
