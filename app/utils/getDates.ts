@@ -16,9 +16,7 @@ type CalendarParse = {
 
 export const fetchICSData = async (calendarId:string) => {
   try {
-    const response = await fetch(
-      "https://calendar.google.com/calendar/ical/ac17926e4dd5f39bd8013dd650c58ce2dec683962020d031e4fbae751b2c73c9%40group.calendar.google.com/private-e83477a1232c8d6c27bfbef746865fec/basic.ics"
-    ); 
+    const response = await fetch(calendarId); 
  
     const icsData = await response.text();
     const data: Calendar[] = icsToJson(icsData);
