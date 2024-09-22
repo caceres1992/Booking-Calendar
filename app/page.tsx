@@ -11,6 +11,10 @@ export default async function Home() {
           Retrieving Calendar dates from <span>Google Calendar</span>
         </h1>
         <CalendarBooking data={data || []} />
+
+        <p className=" text-center text-white">
+              added in hotfix branch
+        </p>
       </div>
     </div>
   );
