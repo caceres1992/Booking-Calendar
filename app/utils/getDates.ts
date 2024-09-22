@@ -1,6 +1,5 @@
 // @ts-expect-error: This error occurs because of a temporary type mismatch
 import icsToJson from "ics-to-json";
-import { format, parseISO } from "date-fns";
 import moment from "moment";
 
 type Calendar = {
